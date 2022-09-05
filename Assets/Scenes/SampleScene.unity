@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 901614891}
   - component: {fileID: 901614890}
   - component: {fileID: 901614892}
+  - component: {fileID: 901614893}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -377,7 +378,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.09258175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -388,7 +389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.81, y: 5.89}
+  m_Size: {x: 3.81, y: 6.075164}
   m_EdgeRadius: 0
 --- !u!50 &901614891
 Rigidbody2D:
@@ -427,6 +428,23 @@ MonoBehaviour:
   rb: {fileID: 901614891}
   joystick: {fileID: 2929252285148316396}
   touch: 0
+--- !u!114 &901614893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901614887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9707784e5d6714d8bf2ec456c8656b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  bullet: {fileID: 108861543859790913}
+  transhoot: {fileID: 1256187733}
+  hp: 100
+  level: 0
 --- !u!1 &1256187732
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256187732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.015, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1882469135}
@@ -764,6 +782,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f29848d04d490e46880087d3e074b08, type: 3}
+--- !u!1 &108861543859790912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 108861543186526009, guid: 5f29848d04d490e46880087d3e074b08,
+    type: 3}
+  m_PrefabInstance: {fileID: 108861543859790911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &108861543859790913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108861543859790912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4c5b9041a17bd4f8b43412ce9345ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  time: 0
+  smoke: {fileID: 2426000449499595936, guid: 33394082df91a2340b2a2d8687713831, type: 3}
+  timeLimit: 200
+  damage: 10
+--- !u!114 &108861543859790914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108861543859790912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9707784e5d6714d8bf2ec456c8656b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  bullet: {fileID: 108861543859790913}
+  transhoot: {fileID: 1256187733}
+  hp: 100
+  level: 0
 --- !u!1001 &2426000449753105451
 PrefabInstance:
   m_ObjectHideFlags: 0
